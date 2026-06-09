@@ -243,32 +243,38 @@ function HeroStat({ value, label, italic }: { value: string; label: string; ital
 }
 
 function ScrollVideo() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-
-  const width = useTransform(scrollYProgress, [0, 0.5], ["32%", "100%"]);
-  const height = useTransform(scrollYProgress, [0, 0.5], ["38vh", "100vh"]);
-  const radius = useTransform(scrollYProgress, [0, 0.5], [32, 0]);
-
   return (
-    <section ref={ref} className="relative h-[500vh] bg-background">
-      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden bg-background">
-        <motion.div
-          style={{ width, height, borderRadius: radius }}
-          className="relative overflow-hidden shadow-[0_40px_120px_-30px_rgba(0,0,0,0.45)] will-change-[width,height]"
-        >
-          <video
-            src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-forest-in-autumn-3573/1080p.mp4"
-            poster={heroHouse}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 h-full w-full object-cover"
+    <section className="bg-background py-16 md:py-24">
+      <div className="container-x grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="overflow-hidden rounded-[2rem] shadow-[0_40px_120px_-35px_rgba(0,0,0,0.35)]">
+          <img
+            src={heroHouse}
+            alt="Будинки Wings Bucha серед сосен"
+            width="1400"
+            height="950"
+            loading="lazy"
+            className="h-full min-h-[320px] w-full object-cover"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-        </motion.div>
+        </div>
+
+        <div className="rounded-[2rem] border border-border bg-card p-7 shadow-card md:p-10">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            <span className="h-px w-8 bg-primary" /> Атмосфера
+          </span>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+            Простір, де видно <span className="serif-italic text-forest">ліс</span>
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            Wings Bucha спроєктований як камерний квартал: менше шуму, більше повітря, власний двір
+            і швидкий доступ до міської інфраструктури.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <HeroMeta value="7 га" label="зеленої території" />
+            <HeroMeta value="газ" label="у кожному будинку" />
+            <HeroMeta value="15 хв" label="до Києва" />
+          </div>
+        </div>
       </div>
     </section>
   );
