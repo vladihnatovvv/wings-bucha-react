@@ -33,16 +33,16 @@ import masterplan from "@/assets/masterplan.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wings Bucha — будинки в Бучі біля соснового лісу" },
+      { title: "Wings Bucha — Крила Бучі | ЖК серед природи, єОселя, 15 хв до Києва" },
       {
         name: "description",
         content:
-          "Wings Bucha у Бучі: дуплекси, таунхауси й котеджі поруч із сосновим лісом. Газ, закрита територія, єОселя та державні сертифікати.",
+          "Преміальний еко-ЖК Wings Bucha у Бучі: дуплекси, таунхауси, котеджі серед сосен. Кредит за єОселя, державні сертифікати, 15 хв до Києва.",
       },
-      { property: "og:title", content: "Wings Bucha — будинки в Бучі біля лісу" },
+      { property: "og:title", content: "Wings Bucha — там, де починається твій політ" },
       {
         property: "og:description",
-        content: "Дуплекси, таунхауси й котеджі на Лісовій, 28. Закрита територія, газ, єОселя.",
+        content: "Дім серед сосен у Бучі. Еко-простір, преміальна архітектура, єОселя.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -96,7 +96,7 @@ function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
           </span>
-          Перша черга · продажі відкриті
+          Старт продажів · І черга
         </span>
         <span className="serif-italic text-base tracking-normal">MMXXVI</span>
       </div>
@@ -115,20 +115,20 @@ function Hero() {
         >
           <div className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-primary">
             <span className="h-px w-10 bg-primary" />
-            Буча · вул. Лісова, 28
+            Преміальний еко-квартал
           </div>
 
           <h1 className="mt-7 text-[2.75rem] font-light leading-[0.98] tracking-[-0.03em] sm:text-6xl lg:text-[5.5rem]">
-            Будинки біля <span className="serif-italic text-forest">сосен,</span>
+            Дім серед <span className="serif-italic text-forest">сосен,</span>
             <span className="mt-2 block">
-              без міської <span className="serif-italic text-forest">метушні.</span>
+              політ <span className="serif-italic text-forest">без меж.</span>
             </span>
           </h1>
 
           <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-            Невеликий житловий квартал у Бучі для тих, хто хоче свій двір, нормальне опалення і
-            швидкий виїзд до Києва. Є газ, закрита територія, розстрочка і програма{" "}
-            <span className="font-semibold text-foreground">єОселя</span>.
+            Камерний квартал на 7 гектарах сосен у Бучі. Архітектура з природного каменю та дерева,
+            повна газифікація, закрита територія. Кредит за{" "}
+            <span className="font-semibold text-foreground">єОселя 3%</span>.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -136,7 +136,7 @@ function Hero() {
               href="#houses"
               className="group inline-flex items-center gap-4 rounded-full bg-foreground py-2 pl-7 pr-2 text-sm font-semibold tracking-wide text-background transition-all hover:scale-[1.02] hover:bg-forest"
             >
-              Подивитись планування
+              Обрати резиденцію
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform group-hover:translate-x-1">
                 <ArrowRight className="h-4 w-4" />
               </span>
@@ -145,15 +145,15 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-3 text-sm font-semibold tracking-wide text-foreground"
             >
-              Домовитись про перегляд
+              Запросити приватний показ
               <span className="h-px w-10 bg-foreground transition-all group-hover:w-16" />
             </a>
           </div>
 
           <div className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-border/70 pt-8">
-            <HeroStat value="єОселя" label="працюємо з програмою" italic />
-            <HeroStat value="15 хв" label="виїзд до Києва" />
-            <HeroStat value="7 га" label="території біля лісу" />
+            <HeroStat value="єОселя" label="акредитований забудовник" italic />
+            <HeroStat value="15 хв" label="до центру Києва" />
+            <HeroStat value="7 га" label="соснового лісу" />
           </div>
         </motion.div>
 
@@ -166,7 +166,7 @@ function Hero() {
           >
             <motion.img
               src={heroHouse}
-              alt="Будинок Wings Bucha біля соснового лісу"
+              alt="Wings Bucha — резиденція серед сосен"
               style={{ y: imgY, scale: imgScale }}
               className="h-full w-full object-cover"
             />
@@ -179,11 +179,13 @@ function Hero() {
             className="absolute right-0 top-6 w-[230px] rounded-3xl bg-foreground p-5 text-background shadow-2xl lg:right-[-20px]"
           >
             <div className="text-[10px] uppercase tracking-[0.24em] text-background/60">
-              Перша черга
+              Доступно у І черзі
             </div>
             <div className="mt-2 flex items-baseline gap-2">
               <span className="serif-italic text-5xl leading-none">25</span>
-              <span className="text-xs uppercase tracking-wider text-background/70">будинків</span>
+              <span className="text-xs uppercase tracking-wider text-background/70">
+                резиденцій
+              </span>
             </div>
             <div className="mt-4 flex gap-1.5">
               {Array.from({ length: 8 }).map((_, i) => (
@@ -194,7 +196,7 @@ function Hero() {
               ))}
             </div>
             <div className="mt-3 text-[10px] uppercase tracking-[0.18em] text-background/55">
-              частина ділянок уже заброньована
+              5 з 8 черг заброньовано
             </div>
           </motion.div>
 
@@ -205,7 +207,7 @@ function Hero() {
             className="absolute -bottom-6 left-0 w-[270px] rounded-3xl bg-background p-5 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.25)] ring-1 ring-border lg:left-[-30px]"
           >
             <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-              <span>Ціна</span>
+              <span>Стартова ціна</span>
               <span>від</span>
             </div>
             <div className="mt-2 flex items-baseline gap-1">
@@ -213,9 +215,9 @@ function Hero() {
               <span className="text-sm text-muted-foreground">000</span>
             </div>
             <div className="mt-4 flex items-center justify-between border-t border-border/70 pt-3 text-xs">
-              <span className="text-muted-foreground">Іпотека</span>
+              <span className="text-muted-foreground">Кредит від</span>
               <span className="rounded-full bg-primary-soft px-2.5 py-1 text-[11px] font-semibold text-forest">
-                єОселя
+                3% єОселя
               </span>
             </div>
           </motion.div>
@@ -312,10 +314,10 @@ function Stat({ value, label, delay = 0 }: { value: string; label: string; delay
 
 function Marquee() {
   const items = [
-    "Дуплекси й таунхауси",
+    "Преміальний еко-ЖК",
     "єОселя 3% / 7%",
-    "Ліс поруч",
-    "Швидкий виїзд до Києва",
+    "Сосновий ліс",
+    "15 хв до Києва",
     "Повна газифікація",
     "Закрита територія",
     "Державні сертифікати",
@@ -340,23 +342,23 @@ function About() {
   const items = [
     {
       icon: TreePine,
-      title: "Ліс поруч",
-      text: "Сосни починаються майже за парканом, тому тут тихіше, ніж у центрі міста.",
+      title: "Серед природи",
+      text: "Сосновий ліс довкола, тиша та свіже повітря щодня.",
     },
     {
       icon: Flame,
       title: "Повна газифікація",
-      text: "Магістральний газ у кожному будинку, без експериментів з опаленням.",
+      text: "Магістральний газ — економія та надійність опалення.",
     },
     {
       icon: MapPin,
-      title: "Зручний виїзд",
-      text: "Поруч основні дороги на Київ, Бучу та Ірпінь. Без довгого петляння дворами.",
+      title: "15 хвилин до Києва",
+      text: "Зручний виїзд, поруч траси та громадський транспорт.",
     },
     {
       icon: ShieldCheck,
-      title: "Документи відкриті",
-      text: "Основні дозволи можна переглянути до зустрічі, а не після внеску.",
+      title: "Надійний забудовник",
+      text: "Всі дозволи в наявності, прозора документація.",
     },
   ];
   return (
@@ -365,16 +367,15 @@ function About() {
         <Reveal>
           <Eyebrow>Про комплекс</Eyebrow>
           <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">
-            Свій дім у Бучі,
+            Жити серед природи,
             <br />
-            <span className="text-shimmer">без відриву</span> від міста
+            <span className="text-shimmer">залишаючись поруч</span> з містом
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
           <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            Wings Bucha — це квартал приватних форматів житла на Лісовій: дуплекси, таунхауси й
-            котеджі. Тут ставку зробили не на гучні обіцянки, а на зрозумілі речі: планування,
-            ділянку, газ, паркінг і нормальний маршрут до міста.
+            Wings Bucha поєднує сучасну архітектуру, природне оточення та продумане планування для
+            сімейного життя. Кожен дім — це простір для родини, де хочеться повертатись.
           </p>
         </Reveal>
       </div>
@@ -442,8 +443,7 @@ function Houses() {
             <Eyebrow>Обрати дім</Eyebrow>
             <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">Типи будинків</h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Три основні формати: компактний таунхаус, сімейний дуплекс і більший котедж із
-              ділянкою.
+              Шість форматів житла — від компактних таунхаусів до просторих котеджів серед сосен.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -554,7 +554,7 @@ function Financing() {
     {
       tag: "Розстрочка",
       rate: "0%",
-      title: "Розстрочка від забудовника",
+      title: "Безвідсоткова від забудовника",
       text: "До 24 місяців без переплат. Перший внесок від 30%.",
     },
   ];
@@ -571,14 +571,14 @@ function Financing() {
                 Кредит за <span className="text-shimmer">єОселя</span> та державні сертифікати
               </h2>
               <p className="mt-5 text-muted-foreground">
-                Підкажемо, який формат проходить під вашу програму, які документи потрібні й де
-                краще починати: з банку, сертифіката чи бронювання ділянки.
+                Wings Bucha акредитовано у програмах державної підтримки. Допомагаємо з оформленням
+                документів та супроводжуємо угоду до ключів.
               </p>
               <a
                 href="#contact"
                 className="group mt-7 inline-flex h-12 items-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-soft hover:shadow-[0_20px_40px_-15px_oklch(0.5_0.07_150/0.5)] transition-shadow"
               >
-                <Wallet className="mr-2 h-4 w-4" /> Обговорити умови
+                <Wallet className="mr-2 h-4 w-4" /> Розрахувати кредит
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -622,15 +622,15 @@ function Masterplan() {
             Територія Wings Bucha
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Територія поділена на житлові квартали, проїзди, паркування та пішохідні зони. Двори не
-            намагаються бути парком розваг — вони мають бути зручними щодня.
+            7+ гектарів продуманого простору: пішохідні алеї, дитячі майданчики, зелені дворики без
+            авто, власна інфраструктура та цілодобова охорона.
           </p>
           <ul className="mt-7 space-y-3.5 text-sm">
             {[
               "Закрита територія з охороною",
-              "Дитячі зони поруч із будинками",
-              "Гостьове паркування",
-              "Окремі пішохідні маршрути",
+              "Дитячі та спортивні майданчики",
+              "Двори без авто",
+              "Підземний та гостьовий паркінг",
             ].map((t, i) => (
               <Reveal key={t} delay={i * 0.08}>
                 <li className="flex items-center gap-3">
@@ -682,13 +682,12 @@ function Documents() {
           <div className="max-w-2xl">
             <Eyebrow>Документи</Eyebrow>
             <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">
-              Документи
+              Прозоро.
               <br />
-              <span className="text-shimmer">без зайвої драми</span>
+              <span className="text-shimmer">Відкрито.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Покажемо основні дозволи, технічні умови й документи по черзі. На перегляді можна
-              пройтись по них разом із менеджером.
+              Усі дозволи та технічна документація доступні до перегляду без виходу зі сторінки.
             </p>
           </div>
         </Reveal>
@@ -757,15 +756,15 @@ function Location() {
             вул. Лісова, 28
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Локація на спокійнішій стороні Бучі, але без відчуття “далеко від усього”: поруч
-            магазини, школи, садочки і виїзд у бік Києва.
+            15 хвилин до Києва, поруч траса Київ–Ковель. Розвинена інфраструктура: садочки, школи,
+            супермаркети, аптеки.
           </p>
           <ul className="mt-7 space-y-3 text-sm">
             {[
               ["3 хв", "до садочка та школи"],
               ["5 хв", "до супермаркету"],
               ["8 хв", "до залізничної станції"],
-              ["15 хв", "виїзд у бік Києва"],
+              ["15 хв", "до Києва"],
             ].map(([t, p], i) => (
               <Reveal key={t} delay={i * 0.08}>
                 <li className="flex items-center gap-3">
@@ -809,16 +808,16 @@ function Contact() {
       <div className="container-x relative grid gap-12 py-24 md:grid-cols-[1fr_1.1fr] md:py-32">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" /> Перегляд
+            <Sparkles className="h-3.5 w-3.5" /> Записатись
           </span>
           <h2 className="mt-5 text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl">
-            Приїдьте
+            Розправ крила
             <br />
-            подивитись
+            вдома
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-primary-foreground/85">
-            Залиште номер, і менеджер підбере 2–3 варіанти під ваш бюджет, покаже планування та
-            пояснить умови купівлі без поспіху.
+            Залиште контакт — менеджер зателефонує впродовж 15 хвилин у робочий час, розрахує умови
+            та запросить на огляд комплексу.
           </p>
           <div className="mt-9 space-y-3 text-sm">
             <div>

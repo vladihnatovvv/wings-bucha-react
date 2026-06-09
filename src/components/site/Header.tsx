@@ -56,7 +56,7 @@ export function Header() {
             href="#contact"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:scale-[1.02]"
           >
-            Запланувати перегляд
+            Записатись на огляд
           </a>
         </div>
 
@@ -83,7 +83,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
-              Запланувати перегляд
+              Записатись на огляд
             </a>
           </div>
         </div>

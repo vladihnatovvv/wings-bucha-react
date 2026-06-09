@@ -16,8 +16,8 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Дуплекси, таунхауси й котеджі на спокійнішій стороні Бучі, поруч із сосновим лісом і
-              виїздом у бік Києва.
+              Сучасний житловий комплекс серед лісу, у 15 хвилинах від Києва. Дім, де народжуються
+              крила.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row">
           <span>© {new Date().getFullYear()} Wings Bucha. Усі права захищені.</span>
-          <span>Буча, вул. Лісова, 28</span>
+          <span>Світла, мінімалістична та природна архітектура</span>
         </div>
       </div>
     </footer>
