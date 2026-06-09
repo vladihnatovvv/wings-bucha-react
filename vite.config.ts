@@ -12,6 +12,8 @@ export default defineConfig({
       customViteReactPlugin: true,
       target: "cloudflare-module",
       server: { entry: "server" },
+      pages: [{ path: "/" }, { path: "/compare" }],
+      prerender: { enabled: true },
     }),
     react(),
     tailwindcss(),
